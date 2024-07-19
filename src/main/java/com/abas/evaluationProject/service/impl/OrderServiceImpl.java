@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
         return totalMap;
     }
 
-    public Map<String, Float> getTotalAmount(Map<String, List<DetailModel>> data) {
+    private Map<String, Float> getTotalAmount(Map<String, List<DetailModel>> data) {
         Map<String, Float> totalAmountMap = new HashMap<>();
         data.forEach((order, details) -> {
             final float[] totalAmount = {0};
@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
         return totalAmountMap;
     }
 
-    public Map<String, Integer> getTotalAmountForNumber(Map<String, List<DetailModel>> data) {
+    private Map<String, Integer> getTotalAmountForNumber(Map<String, List<DetailModel>> data) {
         Map<String, Integer> totalAmountForNumberMap = new HashMap<>();
 
         data.forEach((order, details) -> {
@@ -62,7 +62,7 @@ public class OrderServiceImpl implements OrderService {
         return totalAmountForNumberMap;
     }
 
-    public Map<String, Float> getTotalForNumber(Map<String, List<DetailModel>> data) {
+    private Map<String, Float> getTotalForNumber(Map<String, List<DetailModel>> data) {
         Map<String, Float> totalForNumberMap = new HashMap<>();
 
         data.forEach((order, details) -> {
